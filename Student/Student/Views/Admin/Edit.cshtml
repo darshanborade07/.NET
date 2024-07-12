@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Student.Models.Entities.Student1;
+<h1>Edit Student Details</h1>
+@if (Model is null)
+{
+    <h1>Student not found</h1>
+}
+<form method="post">
+    <div class="mt-3">
+        <label class="form-label">Id</label>
+        <input type="number" class="form-control" asp-for="Id" readonly />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Phone</label>
+        <input type="number" class="form-control" asp-for="Phone" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Address</label>
+        <input type="text" class="form-control" asp-for="Address" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Date</label>
+        <input type="datetime" class="form-control" asp-for="Date" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Password</label>
+        <input type="number" class="form-control" asp-for="Password" />
+    </div><br />
+    <div>
+        Status
+    </div>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" name="status" id="o1" value="Active" asp-for="Status">
+        <label class="form-check-label" for="o1">Active</label>
+    </div>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" name="status" id="o2" value="Inactive" asp-for="Status">
+        <label class="form-check-label" for="o2">Inactive</label>
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Role</label>
+        <input type="text" class="form-control" asp-for="Role" readonly />
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+
+</form>
